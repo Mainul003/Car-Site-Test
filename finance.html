@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Finance – AutoApex Bangladesh</title>
+  <meta name="description" content="Flexible car finance options for every budget. Calculate your monthly repayments with AutoApex Bangladesh.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">AUTO<span>APEX</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="inventory.html">Inventory</a></li>
+    <li><a href="finance.html" class="active">Finance</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Get a Quote</a>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-header">
+  <div class="section-label">Flexible Funding</div>
+  <h1 class="section-title" style="font-family:var(--font-display);font-size:clamp(3rem,6vw,5.5rem);letter-spacing:2px;line-height:1">CAR FINANCE</h1>
+  <p class="text-muted" style="margin-top:16px;max-width:500px">Competitive rates. Flexible terms. Get behind the wheel of your dream car today.</p>
+</div>
+
+<!-- FINANCE CALCULATOR -->
+<section class="section">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start" class="detail-grid">
+    <div>
+      <div class="section-label">Try It Now</div>
+      <h2 class="section-title" style="font-size:clamp(2rem,4vw,3rem)">PAYMENT CALCULATOR</h2>
+      <p style="color:var(--muted);margin-bottom:40px">Estimate your monthly repayment based on your preferred vehicle price, down payment, and loan term.</p>
+
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <div class="form-group">
+          <label>Vehicle Price (৳)</label>
+          <input type="number" id="calcPrice" value="5000000" placeholder="e.g. 5000000">
+        </div>
+        <div class="form-group">
+          <label>Down Payment (৳)</label>
+          <input type="number" id="calcDown" value="1000000" placeholder="e.g. 1000000">
+        </div>
+        <div class="form-group">
+          <label>Loan Term</label>
+          <select id="calcTerm">
+            <option value="12">12 Months (1 Year)</option>
+            <option value="24">24 Months (2 Years)</option>
+            <option value="36">36 Months (3 Years)</option>
+            <option value="48">48 Months (4 Years)</option>
+            <option value="60" selected>60 Months (5 Years)</option>
+            <option value="72">72 Months (6 Years)</option>
+            <option value="84">84 Months (7 Years)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Interest Rate</label>
+          <select>
+            <option>6.9% APR (Standard)</option>
+            <option>7.5% APR (Fixed)</option>
+            <option>8.9% APR (Balloon)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESULT PANEL -->
+    <div>
+      <div style="background:var(--panel);border:1px solid var(--border);padding:48px;text-align:center">
+        <div style="font-family:var(--font-condensed);font-size:0.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:16px">Estimated Monthly Payment</div>
+        <div id="calcResult" style="font-family:var(--font-display);font-size:4.5rem;color:var(--red);line-height:1;margin-bottom:16px">৳67,800 / mo</div>
+        <div style="font-size:0.82rem;color:var(--muted);margin-bottom:40px">Based on 6.9% APR over 60 months</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;text-align:left;margin-bottom:40px">
+          <div style="background:var(--dark);padding:20px;border:1px solid var(--border)">
+            <div style="font-size:0.72rem;color:var(--muted);font-family:var(--font-condensed);letter-spacing:1px;margin-bottom:4px">Loan Amount</div>
+            <div style="font-family:var(--font-condensed);font-weight:700" id="loanAmount">৳40,00,000</div>
+          </div>
+          <div style="background:var(--dark);padding:20px;border:1px solid var(--border)">
+            <div style="font-size:0.72rem;color:var(--muted);font-family:var(--font-condensed);letter-spacing:1px;margin-bottom:4px">Total Repayable</div>
+            <div style="font-family:var(--font-condensed);font-weight:700" id="totalRepay">৳40,68,000</div>
+          </div>
+          <div style="background:var(--dark);padding:20px;border:1px solid var(--border)">
+            <div style="font-size:0.72rem;color:var(--muted);font-family:var(--font-condensed);letter-spacing:1px;margin-bottom:4px">Term Length</div>
+            <div style="font-family:var(--font-condensed);font-weight:700">60 Months</div>
+          </div>
+          <div style="background:var(--dark);padding:20px;border:1px solid var(--border)">
+            <div style="font-size:0.72rem;color:var(--muted);font-family:var(--font-condensed);letter-spacing:1px;margin-bottom:4px">Interest Rate</div>
+            <div style="font-family:var(--font-condensed);font-weight:700">6.9% APR</div>
+          </div>
+        </div>
+
+        <a href="contact.html" class="btn-primary" style="display:block;text-align:center;padding:18px">Apply for Finance</a>
+        <p style="font-size:0.72rem;color:var(--muted);margin-top:16px;line-height:1.6">*This is an estimate only. Final rates subject to credit approval and bank conditions. Representative APR 6.9%.</p>
+      </div>
+
+      <!-- Bank Partners -->
+      <div style="margin-top:32px">
+        <div style="font-family:var(--font-condensed);font-size:0.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:16px">Finance Partners</div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <div style="background:var(--panel);border:1px solid var(--border);padding:10px 20px;font-size:0.82rem;font-family:var(--font-condensed)">Dutch-Bangla Bank</div>
+          <div style="background:var(--panel);border:1px solid var(--border);padding:10px 20px;font-size:0.82rem;font-family:var(--font-condensed)">BRAC Bank</div>
+          <div style="background:var(--panel);border:1px solid var(--border);padding:10px 20px;font-size:0.82rem;font-family:var(--font-condensed)">Eastern Bank</div>
+          <div style="background:var(--panel);border:1px solid var(--border);padding:10px 20px;font-size:0.82rem;font-family:var(--font-condensed)">Standard Chartered</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINANCE OPTIONS -->
+<section class="section" style="background:var(--dark);padding-top:100px">
+  <div class="section-label">Finance Plans</div>
+  <h2 class="section-title">CHOOSE YOUR PLAN</h2>
+  <div class="why-grid" style="margin-top:48px">
+    <div class="why-item">
+      <div class="why-icon">📊</div>
+      <div class="why-title">Standard Loan</div>
+      <p class="why-text">Fixed monthly repayments over 12–84 months. Fully own the vehicle from day one. Rates from 6.9% APR.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">🔄</div>
+      <div class="why-title">Balloon Finance</div>
+      <p class="why-text">Lower monthly payments with a final balloon payment. Perfect if you want to upgrade every 3–4 years.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">🏦</div>
+      <div class="why-title">Islamic Finance</div>
+      <p class="why-text">Sharia-compliant financing through our partner banks. Murabaha and Ijarah structures available.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">⚡</div>
+      <div class="why-title">Same-Day Approval</div>
+      <p class="why-text">Submit your application online and get a decision in as little as 2 hours. Drive away today.</p>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY FORM -->
+<section class="section">
+  <div style="max-width:760px;margin:0 auto">
+    <div class="section-label">Pre-Qualify Now</div>
+    <h2 class="section-title" style="margin-bottom:16px">FINANCE APPLICATION</h2>
+    <p style="color:var(--muted);margin-bottom:48px">Complete the form below and one of our finance specialists will contact you within 24 hours.</p>
+
+    <form id="contactForm">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="Mohammad">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Rahman">
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="+880 1700-000000">
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label>Vehicle of Interest</label>
+          <input type="text" placeholder="e.g. BMW M4 2024">
+        </div>
+        <div class="form-group">
+          <label>Approximate Budget (৳)</label>
+          <input type="number" placeholder="e.g. 5000000">
+        </div>
+        <div class="form-group">
+          <label>Employment Status</label>
+          <select>
+            <option>Salaried Employee</option>
+            <option>Self-Employed / Business Owner</option>
+            <option>Government Employee</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Monthly Income Range (৳)</label>
+          <select>
+            <option>৳50,000 – ৳1,00,000</option>
+            <option>৳1,00,000 – ৳2,00,000</option>
+            <option>৳2,00,000 – ৳5,00,000</option>
+            <option>৳5,00,000+</option>
+          </select>
+        </div>
+        <div class="form-group form-full">
+          <label>Additional Notes</label>
+          <textarea placeholder="Any additional information about your finance requirements…"></textarea>
+        </div>
+        <div class="form-full">
+          <button type="submit" class="btn-primary" style="padding:18px 48px">Submit Application</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div>
+    <h2>SPEAK TO A SPECIALIST</h2>
+    <p>Our finance experts are available 6 days a week to help you find the best deal.</p>
+  </div>
+  <a href="tel:+8801700000000" class="btn-white">Call Us Now</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">AUTO<span>APEX</span></div>
+      <p>Dhaka's premier destination for luxury and performance vehicles. Trusted since 2008.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Inventory</h4>
+      <ul><li><a href="inventory.html">New Arrivals</a></li><li><a href="inventory.html">Luxury Cars</a></li><li><a href="inventory.html">SUVs & 4WDs</a></li><li><a href="inventory.html">Sports Cars</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul><li><a href="finance.html">Car Finance</a></li><li><a href="contact.html">Trade-In</a></li><li><a href="contact.html">Test Drive</a></li><li><a href="about.html">About Us</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul><li><a href="tel:+8801700000000">+880 1700-000000</a></li><li><a href="mailto:info@autoapex.com.bd">info@autoapex.com.bd</a></li><li><a href="#">Gulshan-2, Dhaka</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 AutoApex Bangladesh. All rights reserved.</span>
+    <span>Privacy Policy · Terms of Use</span>
+  </div>
+</footer>
+
+<script>
+// Finance calculator
+const calcPrice = document.getElementById('calcPrice');
+const calcDown = document.getElementById('calcDown');
+const calcTerm = document.getElementById('calcTerm');
+const calcResult = document.getElementById('calcResult');
+const loanAmount = document.getElementById('loanAmount');
+const totalRepay = document.getElementById('totalRepay');
+
+function fmt(n) { return '৳' + Math.round(n).toLocaleString('en-IN'); }
+
+function calculate() {
+  const price = parseFloat(calcPrice.value) || 0;
+  const down = parseFloat(calcDown.value) || 0;
+  const term = parseInt(calcTerm.value) || 60;
+  const rate = 0.069 / 12;
+  const loan = price - down;
+  if (loan <= 0) { calcResult.textContent = '৳0 / mo'; return; }
+  const monthly = loan * rate / (1 - Math.pow(1 + rate, -term));
+  calcResult.textContent = fmt(monthly) + ' / mo';
+  loanAmount.textContent = fmt(loan);
+  totalRepay.textContent = fmt(monthly * term);
+}
+
+[calcPrice, calcDown, calcTerm].forEach(el => el && el.addEventListener('input', calculate));
+calculate();
+
+// Contact form
+document.getElementById('contactForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type="submit"]');
+  btn.textContent = 'Application Sent ✓';
+  btn.style.background = '#22c55e';
+  setTimeout(() => { btn.textContent = 'Submit Application'; btn.style.background = ''; }, 3000);
+});
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory – AutoApex Bangladesh</title>
+  <meta name="description" content="Browse AutoApex's full inventory of new and pre-owned luxury vehicles in Dhaka, Bangladesh.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">AUTO<span>APEX</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="inventory.html" class="active">Inventory</a></li>
+    <li><a href="finance.html">Finance</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Get a Quote</a>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="section-label">Full Selection</div>
+  <h1 class="section-title" style="font-family:var(--font-display);font-size:clamp(3rem,6vw,5.5rem);letter-spacing:2px;line-height:1">OUR INVENTORY</h1>
+  <p class="text-muted" style="margin-top:16px">500+ vehicles available — new arrivals weekly.</p>
+</div>
+
+<section class="section">
+  <!-- Search -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search by make, model, year…" id="searchInput">
+    <button onclick="filterSearch()">Search</button>
+  </div>
+
+  <div class="listing-layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-title">Condition</div>
+        <label class="sidebar-option"><input type="checkbox" checked> New Vehicles</label>
+        <label class="sidebar-option"><input type="checkbox" checked> Pre-Owned</label>
+        <label class="sidebar-option"><input type="checkbox"> Certified CPO</label>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Category</div>
+        <label class="sidebar-option"><input type="checkbox" checked> Sedan</label>
+        <label class="sidebar-option"><input type="checkbox" checked> SUV / 4WD</label>
+        <label class="sidebar-option"><input type="checkbox" checked> Sports Car</label>
+        <label class="sidebar-option"><input type="checkbox"> Electric / Hybrid</label>
+        <label class="sidebar-option"><input type="checkbox"> Coupe</label>
+        <label class="sidebar-option"><input type="checkbox"> Convertible</label>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Brand</div>
+        <label class="sidebar-option"><input type="checkbox" checked> BMW</label>
+        <label class="sidebar-option"><input type="checkbox" checked> Mercedes-Benz</label>
+        <label class="sidebar-option"><input type="checkbox" checked> Audi</label>
+        <label class="sidebar-option"><input type="checkbox"> Porsche</label>
+        <label class="sidebar-option"><input type="checkbox"> Lexus</label>
+        <label class="sidebar-option"><input type="checkbox"> Toyota</label>
+        <label class="sidebar-option"><input type="checkbox"> Land Rover</label>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Price Range (Crore ৳)</div>
+        <div style="margin-top:12px;font-size:0.85rem;color:var(--muted)">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px"><span>৳0</span><span>৳5 Cr</span></div>
+          <input type="range" min="0" max="500" value="300" style="width:100%;accent-color:var(--red)">
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Year</div>
+        <label class="sidebar-option"><input type="checkbox"> 2024 – 2025</label>
+        <label class="sidebar-option"><input type="checkbox"> 2022 – 2023</label>
+        <label class="sidebar-option"><input type="checkbox"> 2019 – 2021</label>
+        <label class="sidebar-option"><input type="checkbox"> 2018 & Older</label>
+      </div>
+
+      <button class="btn-primary" style="width:100%">Apply Filters</button>
+    </aside>
+
+    <!-- CARS GRID -->
+    <div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;flex-wrap:wrap;gap:12px">
+        <span style="color:var(--muted);font-size:0.88rem">Showing <strong style="color:var(--white)">24</strong> of 500+ vehicles</span>
+        <select style="background:var(--panel);border:1px solid var(--border);color:var(--white);padding:8px 14px;font-family:var(--font-body);outline:none">
+          <option>Sort: Newest First</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Mileage: Low</option>
+        </select>
+      </div>
+
+      <div class="cars-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+
+        <a href="car-detail.html" class="car-card" style="display:block">
+          <div class="car-card-img">
+            <div class="car-emoji">🏎️</div>
+            <div class="car-badge-new">New</div>
+          </div>
+          <div class="car-card-body">
+            <div class="car-make">BMW</div>
+            <div class="car-model">M4 Competition</div>
+            <div class="car-specs">
+              <div class="spec-item">⚡ 503 HP</div>
+              <div class="spec-item">📅 2024</div>
+            </div>
+            <div class="car-footer">
+              <div><div class="car-price-label">Starting at</div><div class="car-price">৳1.45 Cr</div></div>
+              <span class="btn-sm">Details</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="car-detail.html" class="car-card" style="display:block">
+          <div class="car-card-img">
+            <div class="car-emoji">🚙</div>
+            <div class="car-badge-new">New</div>
+          </div>
+          <div class="car-card-body">
+            <div class="car-make">Mercedes-Benz</div>
+            <div class="car-model">GLE 53 AMG</div>
+            <div class="car-specs">
+              <div class="spec-item">⚡ 429 HP</div>
+              <div class="spec-item">📅 2024</div>
+            </div>
+            <div class="car-footer">
+              <div><div class="car-price-label">Starting at</div><div class="car-price">৳1.80 Cr</div></div>
+              <span class="btn-sm">Details</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="car-detail.html" class="car-card" style="display:block">
+          <div class="car-card-img">
+            <div class="car-emoji">🚗</div>
+            <div class="car-badge-used">Pre-Owned</div>
+          </div>
+          <div class="car-card-body">
+            <div class="car-make">Audi</div>
+            <div class="car-model">RS6 Avant</div>
+            <div class="car-specs">
+              <div class="spec-item">⚡ 591 HP</div>
+              <div class="spec-item">📅 2022</div>
+            </div>
+            <div class="car-footer">
+              <div><div class="car-price-label">Starting at</div><div class="car-price">৳95 Lakh</div></div>
+              <span class="btn-sm">Details</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="car-detail.html" class="car-card" style="display:block">
+          <div class="car-card-img">
+            <div class="car-emoji">🚕</div>
+            <div class="car-badge-new">New</div>
+          </div>
+          <div class="car-card-body">
+            <div class="car-make">Porsche</div>
+            <div class="car-model">Cayenne GTS</div>
+            <div class="car-specs">
+              <div class="spec-item">⚡ 460 HP</div>
+              <div class="spec-item">📅 2024</div>
+            </div>
+            <div class="car-footer">
+              <div><div class="car-price-label">Starting at</div><div class="car-price">৳2.20 Cr</div></div>
+              <span class="btn-sm">Details</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="car-detail.html" class="car-card" style="display:block">
+          <div class="car-card-img">
+            <div class="car-emoji">⚡</div>
+            <div class="car-badge-new">New</div>
+          </div>
+          <div class="car-card-body">
+            <div class="car-make">Tesla</div>
+            <div class="car-model">Model S Plaid</div>
+            <div class="car-specs">
+              <div class="spec-item">⚡ 1,020 HP</div>
+              <div class="spec-item">📅 2024</div>
+            </div>
+            <div class="car-footer">
+              <div><div class="car-price-label">Starting at</div><div class="car-price">৳1.95 Cr</div></div>
+              <span class="btn-sm">Details</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="car-detail.html" class="car-card" style="display:block">
+          <div class="car-card-img">
+            <div class="car-emoji">🛻</div>
+            <div class="car-badge-used">Pre-Owned</div>
+          </div>
+          <div class="car-card-body">
+            <div class="car-make">Land Rover</div>
+            <div class="car-model">Defender 110</div>
+            <div class="car-specs">
+              <div class="spec-item">⚡ 395 HP</div>
+              <div class="spec-item">📅 2023</div>
+            </div>
+            <div class="car-footer">
+              <div><div class="car-price-label">Starting at</div><div class="car-price">৳1.15 Cr</div></div>
+              <span class="btn-sm">Details</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="car-detail.html" class="car-card" style="display:block">
+          <div class="car-card-img">
+            <div class="car-emoji">🚘</div>
+            <div class="car-badge-used">Pre-Owned</div>
+          </div>
+          <div class="car-card-body">
+            <div class="car-make">Lexus</div>
+            <div class="car-model">LX 600 F-Sport</div>
+            <div class="car-specs">
+              <div class="spec-item">⚡ 409 HP</div>
+              <div class="spec-item">📅 2023</div>
+            </div>
+            <div class="car-footer">
+              <div><div class="car-price-label">Starting at</div><div class="car-price">৳1.35 Cr</div></div>
+              <span class="btn-sm">Details</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="car-detail.html" class="car-card" style="display:block">
+          <div class="car-card-img">
+            <div class="car-emoji">🏁</div>
+            <div class="car-badge-new">New</div>
+          </div>
+          <div class="car-card-body">
+            <div class="car-make">BMW</div>
+            <div class="car-model">M8 Gran Coupe</div>
+            <div class="car-specs">
+              <div class="spec-item">⚡ 617 HP</div>
+              <div class="spec-item">📅 2024</div>
+            </div>
+            <div class="car-footer">
+              <div><div class="car-price-label">Starting at</div><div class="car-price">৳2.50 Cr</div></div>
+              <span class="btn-sm">Details</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Pagination -->
+      <div style="display:flex;justify-content:center;gap:8px;margin-top:60px">
+        <button class="filter-btn active" style="width:42px;height:42px;padding:0">1</button>
+        <button class="filter-btn" style="width:42px;height:42px;padding:0">2</button>
+        <button class="filter-btn" style="width:42px;height:42px;padding:0">3</button>
+        <button class="filter-btn" style="width:42px;height:42px;padding:0">…</button>
+        <button class="filter-btn" style="width:42px;height:42px;padding:0">21</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">AUTO<span>APEX</span></div>
+      <p>Dhaka's premier destination for luxury and performance vehicles. Trusted since 2008.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Inventory</h4>
+      <ul>
+        <li><a href="inventory.html">New Arrivals</a></li>
+        <li><a href="inventory.html">Luxury Cars</a></li>
+        <li><a href="inventory.html">SUVs & 4WDs</a></li>
+        <li><a href="inventory.html">Sports Cars</a></li>
+        <li><a href="inventory.html">Electric Vehicles</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="finance.html">Car Finance</a></li>
+        <li><a href="contact.html">Trade-In</a></li>
+        <li><a href="contact.html">Test Drive</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+8801700000000">+880 1700-000000</a></li>
+        <li><a href="mailto:info@autoapex.com.bd">info@autoapex.com.bd</a></li>
+        <li><a href="#">Gulshan-2, Dhaka</a></li>
+        <li><a href="#">Sat–Thu: 9AM–7PM</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 AutoApex Bangladesh. All rights reserved.</span>
+    <span>Privacy Policy · Terms of Use</span>
+  </div>
+</footer>
+
+<script>
+function filterSearch() {
+  const val = document.getElementById('searchInput').value.toLowerCase();
+  document.querySelectorAll('.car-card').forEach(card => {
+    card.style.display = card.textContent.toLowerCase().includes(val) ? 'block' : 'none';
+  });
+}
+document.getElementById('searchInput').addEventListener('keyup', e => { if(e.key==='Enter') filterSearch(); });
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
